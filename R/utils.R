@@ -33,10 +33,6 @@ stdin_read_line <- function() {
     .Call("stdin_read_line", PACKAGE = "languageserver")
 }
 
-getppid <- function() {
-    .Call("do_getppid", PACKAGE = "languageserver")
-}
-
 leisurize <- function(fun, t = 1) {
     last_execuation_time <- 0
     function(...) {

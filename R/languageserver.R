@@ -161,11 +161,6 @@ LanguageServer <- R6::R6Class("LanguageServer",
             if (!isOpen(self$inputcon)) {
                 self$exit_flag <- TRUE
             }
-
-            if (.Platform$OS.type == "unix" && getppid() == 1) {
-                # exit if the current process becomes orphan
-                self$exit_flag <- TRUE
-            }
         },
 
         read_line = function() {
